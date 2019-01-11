@@ -18,6 +18,6 @@ docker network create sambanet
 
 docker run --privileged --rm -h host --name host --network sambanet -it hostpam:samba
 
-docker run --privileged --rm --name smb -h smb --network sambanet -it sambsa:server
+docker run --privileged --rm --name smb -h smb --network sambanet -it samba:server
 
 docker run --rm --network sambanet -h ldap --name ldap -p 389:389 -d ldapserver:samba
