@@ -8,6 +8,6 @@ LABEL description="host PAM 2018-2019"
 RUN dnf -y install procps passwd openldap-clients nss-pam-ldapd pam_mount vim samba
 RUN mkdir /opt/docker
 COPY * /opt/docker/
-RUN chmod +x /opt/docker/install.sh /opt/docker/startup.sh /opt/docker/samba_users.sh
+RUN chmod +x /opt/docker/install.sh /opt/docker/startup.sh /opt/docker/samba_users.sh /opt/docker/dirinstall.sh
 WORKDIR /opt/docker
 CMD ["/opt/docker/startup.sh"]
