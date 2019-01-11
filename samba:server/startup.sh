@@ -7,6 +7,6 @@
 /usr/sbin/nslcd && echo "nslcd Ok"
 /usr/sbin/nscd && echo "nscd Ok"
 /usr/sbin/smbd && echo "sabmab"
-/usr/sbin/nmb && echo "sabmab"
+/usr/sbin/nmbd && echo "sabmab"
 bash /opt/docker/samba_users.sh
 /bin/bash
