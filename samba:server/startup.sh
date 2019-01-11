@@ -6,7 +6,7 @@
 /opt/docker/install.sh && echo "Install Ok"
 /usr/sbin/nslcd && echo "nslcd Ok"
 /usr/sbin/nscd && echo "nscd Ok"
-/usr/sbin/smb && echo "sabmab"
+/usr/sbin/smbd && echo "sabmab"
 /usr/sbin/nmb && echo "sabmab"
 bash /opt/docker/samba_users.sh
 /bin/bash

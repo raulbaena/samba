@@ -14,12 +14,7 @@
 
 		<!-- Volume definitions -->
 
-		<volume
-       user="*" 
-       fstype="tmpfs"   
-       mountpoint="~/tmp"
-       options="size=100M,uid=%(USER),mode=0775" 
-     />
+	<volume user="*" fstype="cifs" server="172.20.0.2" path="%(USER)" mountpoint="~/%(USER)" />
 		<!-- pam_mount parameters: General tunables -->
 
 <!--
