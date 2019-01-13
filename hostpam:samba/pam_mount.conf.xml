@@ -14,8 +14,9 @@
 
 		<!-- Volume definitions -->
 
-	<volume user="*" fstype="cifs" server="172.20.0.2" path="%(USER)" mountpoint="~/%(USER)" />
-		<!-- pam_mount parameters: General tunables -->
+	<volume user="*" fstype="cifs" server="172.19.0.3" path="%(USER)" mountpoint="~/%(USER)"/>
+
+	<!-- pam_mount parameters: General tunables -->
 
 <!--
 <luserconf name=".pam_mount.conf.xml" />
