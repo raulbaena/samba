@@ -3,7 +3,7 @@
 # hostpam
 # -------------------------------------
 FROM fedora:27
-LABEL author="@edt ASIX M06-ASO"
+LABEL author="Raul Baena Nocea @edt ASIX M06-ASO"
 LABEL description="host PAM 2018-2019"
 RUN dnf -y install procps passwd openldap-clients nss-pam-ldapd authconfig pam_mount cifs-utils
 RUN mkdir /opt/docker
