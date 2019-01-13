@@ -12,6 +12,14 @@ ldapserver:samba --> Un servidor ldap en funcionament amb els usuaris de xarxa.
 
 hostpam:samba --> Host amb connexío al servidor ldap. Utilitzarem aquest host per conectarnos al samba
 
+## Descarregar les imatges
+
+docker pull raulbaena/samba:server
+
+docker pull raulbaena/ldapserver:samba
+
+docker pull raulbaena/hostpam:samba
+
 ## Execució de les maquines
 
 docker network create sambanet
