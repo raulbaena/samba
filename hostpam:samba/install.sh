@@ -10,7 +10,7 @@ cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
 cp /opt/docker/system-auth-edt /etc/pam.d/system-auth-edt
 cp /opt/docker/pam_mount.conf.xml /etc/security/pam_mount.conf.xml
 cp /etc/pam.d/system-auth-edt /etc/pam.d/system-auth
-
+./auth.sh
 groupadd localgrp01
 groupadd localgrp02
 useradd -g users -G localgrp01 local01
