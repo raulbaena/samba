@@ -3,6 +3,14 @@
 # instal.lacio
 #  - crear usuaris locals
 # -------------------------------------
+bash /opt/docker/auth.sh
+cp /opt/docker/nslcd.conf /etc/nslcd.conf
+cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
+cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
+cp /opt/docker/system-auth-edt /etc/pam.d/system-auth-edt
+cp /opt/docker/pam_mount.conf.xml /etc/security/pam_mount.conf.xml
+cp /etc/pam.d/system-auth-edt /etc/pam.d/system-auth
+
 groupadd localgrp01
 groupadd localgrp02
 useradd -g users -G localgrp01 local01
@@ -17,12 +25,4 @@ echo "local03" | passwd --stdin local03
 echo "local04" | passwd --stdin local04
 echo "local05" | passwd --stdin local05
 echo "local06" | passwd --stdin local06
-
-bash /opt/docker/auth.sh
-cp /opt/docker/nslcd.conf /etc/nslcd.conf
-cp /opt/docker/ldap.conf /etc/openldap/ldap.conf
-cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
-cp /opt/docker/system-auth-edt /etc/pam.d/system-auth-edt
-cp /opt/docker/pam_mount.conf.xml /etc/security/pam_mount.conf.xml
-cp /etc/pam.d/system-auth-edt /etc/pam.d/system-auth
 
