@@ -10,8 +10,13 @@ mkdir -p /tmp/home/marta
 mkdir -p /tmp/home/2asix/user10
 mkdir -p /tmp/home/2asix/vladimir
 
-chown -R 5001.100 /tmp/home/pere
-chown -R 5000.100 /tmp/home/pau
-chown -R 5003.100 /tmp/home/marta
+cp /opt/docker/README.md /tmp/home/pere/README.md
+cp /opt/docker/README.md /tmp/home/marta/README.md
+cp /opt/docker/README.md /tmp/home/pau/README.md
+cp /opt/docker/README.md /tmp/home/2asix/vladimir/README.md
+
+chown -R pere.hisx2 /tmp/home/pere
+chown -R pau.hisx2 /tmp/home/pau
+chown -R marta.hisx2 /tmp/home/marta
 chown -R 11011.10001 /tmp/home/2asix/user10
-chown -R 11009.10001 /tmp/home/2asix/vladimir
+chown -R vladimir.10001 /tmp/home/2asix/vladimir
