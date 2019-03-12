@@ -8,10 +8,10 @@ docker run --privileged --rm --name host --hostname host --network sambanet  -it
 ## Configuracio del client
 
 Hem de configurar l'arxiu pam_mount i afegir una line que permeti muntar sistemas de fitxers cifs.
-
-<volume user="*" fstype="cifs" server="172.20.0.3" path="%(USER)" mountpoint="~/%(USER)"
+```
+<volume user="*" fstype="cifs" server="smb" path="%(USER)" mountpoint="~/%(USER)"
 />
-
+```
 ## Exemple del funcionament
 
 [root@host docker]# su - marta

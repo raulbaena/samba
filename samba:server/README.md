@@ -2,37 +2,51 @@
 
 ## @edt ASIX M06-ASO Curs 2018-2019
 
-Fitxers necesaris per la cració del servidor SAMBA
 
 ## Fitxers de configuració
+Coguracio de l'arxiu smb.conf
+```
+[global]
+        workgroup = SAMBA
+        security = user
 
-Fitxers
+        passdb backend = tdbsam
 
-Dockerfile
+        printing = cups
+        printcap name = cups
+        load printers = yes
+        cups options = raw
 
-README.md
+[homes]
+        comment = Home Directories
+        valid users = %S, %D%w%S
+        browseable = No
+        read only = No
+        inherit acls = Yes
+```
 
-install.sh
+Configuracio de l'arxiu ldap.conf
+```
+BASE	dc=edt,dc=org
+URI	ldap://ldap
+```
 
-ldap.conf
-
-nslcd.conf
-
-nsswitch.conf
-
-pam_mount.conf.xml
-
-startup.sh
-
-system-auth
-
-dir_samba.sh
-
-usuaris_samba.sh
-
+Configuracio del arxiu nslcd.conf
+```
+uid nslcd
+gid ldap
+uri ldap://ldap
+base dc=edt,dc=org
+```
+Configuracio el fitxer nsswitch.con
+```
+passwd:    files ldap
+shadow:    files 
+group:     files ldap
+```
 # Execució de la imatge 
 
-docker run --privileged --rm --name smb -h smb --network sambanet -it samba:server
+docker run --privileged --rm --name smb -h smb --network sambanet -it raulbaena/sambahomes:server
 
 
 #By Raul Baena Nocea
