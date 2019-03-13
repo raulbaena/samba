@@ -24,11 +24,12 @@ docker pull raulbaena/sambahomes:ldap
 
 docker network create sambanet
 
-docker run --privileged --rm -h host --name host --network sambanet -it raulbaena/sambahomes:host
+docker run --rm --network sambanet -h ldap --name ldap -p 389:389 -d raulbaena/sambahomes:ldap
 
 docker run --privileged --rm --name smb -h smb --network sambanet -it raulbaena/sambahomes:server
 
-docker run --rm --network sambanet -h ldap --name ldap -p 389:389 -d raulbaena/sambahomes:ldap
+docker run --privileged --rm -h host --name host --network sambanet -it raulbaena/sambahomes:host
+
 
 #Exemple del funcionament
 ```
