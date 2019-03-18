@@ -8,14 +8,14 @@ useradd pla
 useradd patipla
 useradd rock
 
-echo -e "smbpla\nsmbpla" | smbpasswd -a pla
-echo -e "smbpatipla\nsmbpatipla" | smbpasswd -a patipla
-echo -e "smbrock\nsmbrock" | smbpasswd -a rock
-echo -e "smblila\nsmblila" | smbpasswd -a lila
-echo -e "smbpere\nsmbpere" | smbpasswd -a pere
-echo -e "smbpau\nsmbpau" | smbpasswd -a pau
-echo -e "smbmarta\nsmbmarta" | smbpasswd -a marta
-echo -e "smbuser10\nsmbuser10" | smbpasswd -a user10
-echo -e "smbvladimir\nsmbvladimir" | smbpasswd -a vladimir
+echo -e "pla\npla" | smbpasswd -a pla
+echo -e "patipla\npatipla" | smbpasswd -a patipla
+echo -e "rock\nrock" | smbpasswd -a rock
+echo -e "lila\nlila" | smbpasswd -a lila
+echo -e "pere\npere" | smbpasswd -a pere
+echo -e "pau\npau" | smbpasswd -a pau
+echo -e "marta\nmarta" | smbpasswd -a marta
+echo -e "user10\nuser10" | smbpasswd -a user10
+echo -e "vladimir\nvladimir" | smbpasswd -a vladimir
 
 
